@@ -23,7 +23,7 @@ public class Order {
     @Column(name = "ma_don_hang", nullable = false)
     private UUID id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ma_khach_hang")
     private Customer maKhachHang;
 

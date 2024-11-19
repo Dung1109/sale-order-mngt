@@ -25,11 +25,11 @@ public class Employee {
     @Column(name = "ten_nhan_vien")
     private String tenNhanVien;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ma_quan_ly")
     private Employee maQuanLy;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ma_phong_ban")
     private Department maPhongBan;
 

@@ -14,13 +14,14 @@ import java.util.UUID;
 @Entity
 @Table(name = "order_policies")
 public class OrderPolicy {
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @ColumnDefault("gen_random_uuid()")
     @Column(name = "ma_chinh_sach", nullable = false)
     private UUID id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ma_nhan_vien")
     private Employee maNhanVien;
 
@@ -28,7 +29,7 @@ public class OrderPolicy {
     @Column(name = "ten_nhan_vien")
     private String tenNhanVien;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ma_khach_hang")
     private Customer maKhachHang;
 
@@ -36,7 +37,7 @@ public class OrderPolicy {
     @Column(name = "ten_khach_hang")
     private String tenKhachHang;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ma_san_pham")
     private Product maSanPham;
 

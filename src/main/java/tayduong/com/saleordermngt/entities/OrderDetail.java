@@ -68,11 +68,11 @@ public class OrderDetail {
     @Column(name = "tong_tien_thanh_toan")
     private BigDecimal tongTienThanhToan;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ma_nhan_vien_phu_trach")
     private Employee maNhanVienPhuTrach;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ma_khach_hang")
     private Customer maKhachHang;
 
